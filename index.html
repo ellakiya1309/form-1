@@ -3,50 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search Something</title>
+  <title>Message Box</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
     }
-    .form-container {
-      background: white;
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    .search-box {
       text-align: center;
-      width: 300px;
     }
-    input, textarea, button {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
+    input[type="text"] {
+      width: 400px;
+      padding: 12px 20px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
+      border-radius: 24px;
+      font-size: 16px;
+      outline: none;
     }
     button {
-      background: #4CAF50;
-      color: white;
+      margin-top: 20px;
+      padding: 10px 20px;
       border: none;
+      border-radius: 24px;
+      background: #4285F4;
+      color: white;
+      font-size: 16px;
       cursor: pointer;
     }
     button:hover {
-      background: #45a049;
+      background: #357ae8;
     }
   </style>
 </head>
 <body>
-  <div class="form-container">
-    <h2>Send a Message</h2>
+  <div class="search-box">
     <form action="https://formspree.io/f/xjkepwpl" method="POST">
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="Type your message..." required></textarea>
+      <input type="text" name="message" placeholder="Type something..." required>
+      <br>
       <button type="submit">Send</button>
     </form>
   </div>
